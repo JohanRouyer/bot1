@@ -2,7 +2,7 @@ const Discord = require("discord.js")
 
 module.exports = async (bot, message) => {
     
-    let prefix = "?";
+    let prefix = ".";
 
     let messageArray = message.content.split(" ")
     let commandName = messageArray[0].slice(prefix.length)
