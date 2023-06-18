@@ -1,0 +1,3 @@
+# BOT discord, apprentissage javaScript et bot discord...
+
+#arret fin #3, passage #4
