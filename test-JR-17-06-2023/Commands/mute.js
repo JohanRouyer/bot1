@@ -40,7 +40,7 @@ module.exports = {
             if(!time) time = "Pas de durée fournie."
 
             if(isNaN(ms(time))) return message.reply("Ce n'est pas le bon format.")
-            if(ms(time) > 86400000) return message.reply("Le mute ne peut pas durer plus de 28 jours.")
+            if(ms(time) > 2419200000 ) return message.reply("Le mute ne peut pas durer plus de 28 jours.")
 
             let reason = args.getString("raison")
             if(!reason) reason = "Pas de raison fournie."
@@ -52,7 +52,7 @@ module.exports = {
             if(member && !member.moderatable) return message.reply("Ce membre ne peut pas être mute.")
             if(member && message.member.roles.highest.comparePositionTo(member.roles.highest) <= 0) return message.reply("Tu n'as pas l'autorisation de mute ce membre.")
             if(member.isCommunicationDisabled()) return message.reply("Membre déjà mute du serveur.")
-
+            
             try{
                 await user.send(`Tu as été mute du serveur ${message.guild.name} par ${message.user} pendant ${time} pour la raison : \`${reason}\``)
             } catch (err) {}
