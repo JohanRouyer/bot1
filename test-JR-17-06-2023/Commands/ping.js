@@ -7,7 +7,7 @@ module.exports = {
     Permission: "Aucune",
     dm: true,
 
-    async run(bot, message) {
+    async run(bot, message, args) {
         
         await message.reply(`Ping : \`${bot.ws.ping}\``)
     }
